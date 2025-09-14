@@ -25,8 +25,8 @@ export default function About() {
 
           <div className="flex gap-4">
             <a
-              href="/resume.pdf" // place resume.pdf in public/
-              download
+              href={`${import.meta.env.BASE_URL}RESUME.pdf`} // place resume.pdf in public/
+              download="RESUME.pdf"
               className="btn flex items-center gap-2"
             >
               <Download size={18} /> Download Resume

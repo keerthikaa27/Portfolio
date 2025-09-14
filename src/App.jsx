@@ -5,12 +5,13 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Section from "./components/Section";
+import { projects } from "./components/Projects";
 import ProjectCard from "./components/ProjectCard";
 import Skills from "./components/Skills";
 import TimelineItem from "./components/TimelineItem";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import { Profile, projects, experience, Education, skills, achievements } from "./data/portfolio";
+import { Profile, experience, Education, skills, achievements } from "./data/portfolio";
 import Achievement from "./components/Achievement";
 
 export default function App() {

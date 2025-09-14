@@ -99,13 +99,13 @@ export const projects = [
 ];
 
 export const skills = {
-  ProgrammingLanguages: ["Python", "Java", "JavaScript"],
-  Frameworks: ["Spring Boot", "React", "NumPy"],
+  ProgrammingLanguages: ["Python", "Java", "JavaScript", "TypeScript"],
+  Frameworks: ["Angular", "Spring Boot", "React.js", "Next.js", "Node.js","TailwindCSS", "NumPy", "Pandas"],
   WebTechnologies: ["HTML", "CSS"],
-  Database: ["MySQL"],
+  Database: ["MongoDB", "MySQL", "PostgreSQL"],
   Tools: ["Git"],
-  Cloud: ["AWS (Beginner)"],
-  CS_Fundamentals: ["Data Structures & Algorithms"],
+  Cloud: ["AWS"],
+  CS_Fundamentals: ["Data Structures & Algorithms", "Object Oriented Programming", "Operating Systems", "Computer Network"],
   Softskills: [
     "Communication",
     "Teamwork",
