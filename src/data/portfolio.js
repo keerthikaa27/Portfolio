@@ -103,7 +103,7 @@ export const skills = {
   Frameworks: ["Angular", "Spring Boot", "React.js", "Next.js", "Node.js","TailwindCSS", "NumPy", "Pandas"],
   WebTechnologies: ["HTML", "CSS"],
   Database: ["MongoDB", "MySQL", "PostgreSQL"],
-  Tools: ["Git"],
+  Tools: ["Git", "Docker"],
   Cloud: ["AWS"],
   CS_Fundamentals: ["Data Structures & Algorithms", "Object Oriented Programming", "Operating Systems", "Computer Network"],
   Softskills: [

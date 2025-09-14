@@ -17,7 +17,7 @@ export const projects = [
   {
     title: "Energy Forecasting Web Application",
     period: "2025",
-    description: "A Full-Stack AI-powered web application to predicts real-time energy consumption.",
+    description: "A Full-Stack AI-powered web application to predicts real-time energy usage.",
     stack: ["React.js", "Flask", "Python", "LSTM", "NumPy", "Pandas","REST APIs"],
     highlights: [
       "Uses LSTM neural networks to predict future energy consumption based on historical data.",
