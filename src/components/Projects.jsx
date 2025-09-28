@@ -1,7 +1,20 @@
 import ProjectCard from "./ProjectCard";
 
-// 👇 add export here
+
 export const projects = [
+  {
+  title: "Newsify – RAG-Powered News Chatbot",
+  period: "2025",
+  description: "A Full-Stack AI chatbot that answers queries over news articles using Retrieval-Augmented Generation (RAG).",
+  stack: ["React.js", "SCSS", "Node.js", "Express", "Redis", "ChromaDB", "Jina Embeddings", "Google Gemini API"],
+  highlights: [
+    "Built a RAG pipeline with embeddings stored in ChromaDB and integrated with Google Gemini for contextual responses.",
+    "Developed an interactive React frontend with session management, chat history, reset functionality, and typing animations.",
+    "Implemented Redis caching for efficient session-based history retrieval and smooth real-time conversations."
+  ],
+  link: "https://news-chatbot-frontend-e592.onrender.com/"
+  },
+
   {
     title: "Fraudulent Transactions Detection Website",
     period: "2025",
