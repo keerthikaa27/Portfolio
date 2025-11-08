@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export default function TimelineItem({ item }) {
   const title = item.title || item.school || item.org;
-  const subtitle = item.degree || item.role; // edu or exp
-  const meta = item.meta;                    // e.g., "CGPA: 7.96" / "Percentage: 91.2"
+  const subtitle = item.degree || item.role; 
+  const meta = item.meta;                    
 
   return (
     <motion.div

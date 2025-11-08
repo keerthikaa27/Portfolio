@@ -1,11 +1,7 @@
-/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ======================
-   Global Theme
-====================== */
 .blinking-cursor {
   display: inline-block;
   width: 1ch;
@@ -23,7 +19,7 @@
 
 body {
   @apply text-zinc-200 font-sans;
-  background-color: #0a192f; /* navy background like Brittany Chiang */
+  background-color: #0a192f; 
 }
 
 .container {
@@ -39,9 +35,6 @@ body {
   @apply font-display text-3xl md:text-4xl font-semibold tracking-tight text-white;
 }
 
-/* ======================
-   Links & Buttons
-====================== */
 a.t-link { 
   @apply text-brand-400 hover:text-brand-300 underline underline-offset-4 decoration-brand-600/40; 
 }
@@ -54,19 +47,12 @@ a.t-link {
   @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 shadow-soft; 
 }
 
-/* ======================
-   Custom Utilities
-====================== */
 @layer utilities {
   .shadow-soft {
-    /* Soft, subtle shadow like Brittany Chiang’s cards */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   }
 }
 
-/* ======================
-   Scrollbar
-====================== */
 ::-webkit-scrollbar { 
   width: 10px; 
   height: 10px; 

@@ -1,4 +1,3 @@
-// src/components/Section.jsx
 export default function Section({ id, title, intro, children }) {
   return (
     <section id={id} className="py-20 bg-[#0a192f] px-6 md:px-20">
@@ -22,7 +21,6 @@ export default function Section({ id, title, intro, children }) {
   );
 }
 
-// Function to return section numbers
 function sectionNumber(title) {
   const order = {
     About: "01.",

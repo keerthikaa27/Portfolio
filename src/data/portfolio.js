@@ -1,5 +1,4 @@
 
-// --- file: src/data/portfolio.js ---
 export const Profile = {
   name: "Nimmagadda Keerthika",
   title: "CSE Undergrad at VIT AP University",
@@ -100,12 +99,12 @@ export const projects = [
 
 export const skills = {
   ProgrammingLanguages: ["Python", "Java", "JavaScript", "TypeScript"],
-  Frameworks: ["Angular", "Spring Boot", "React.js", "Next.js", "Node.js","TailwindCSS", "NumPy", "Pandas"],
+  Frameworks: ["React.js", "Node.js", "Express.js", "Angular", "TailwindCSS", "Flask", "NumPy", "Pandas"],
   WebTechnologies: ["HTML", "CSS"],
   Database: ["MongoDB", "MySQL", "PostgreSQL"],
-  Tools: ["Git", "Docker"],
+  Tools: ["Git", "Docker", "CI/CD Tools"],
   Cloud: ["AWS"],
-  CS_Fundamentals: ["Data Structures & Algorithms", "Object Oriented Programming", "Operating Systems", "Computer Network"],
+  CS_Fundamentals: ["Data Structures & Algorithms", "Object Oriented Programming", "Operating Systems", "Computer Network", "REST APIs"],
   Softskills: [
     "Communication",
     "Teamwork",

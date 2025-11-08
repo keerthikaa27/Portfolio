@@ -8,7 +8,6 @@ export default function Hero() {
   const roles = ["Full-stack Developer", "Software Developer", "Web Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
 
-  // Cycle through roles every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % roles.length);

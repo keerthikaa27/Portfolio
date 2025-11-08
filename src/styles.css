@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global tweaks */
 :root {
   --container: 1100px;
 }
@@ -24,6 +23,5 @@ a.t-link { @apply text-brand-400 hover:text-brand-300 underline underline-offset
 .btn { @apply inline-flex items-center gap-2 rounded-2xl border border-white/10 px-4 py-2 hover:bg-white/5 transition; }
 .card { @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 shadow-soft; }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 9999px; }

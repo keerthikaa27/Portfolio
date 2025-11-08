@@ -1,58 +1,64 @@
-<<<<<<< HEAD
-=======
-HEAD
->>>>>>> 32af1ee7a962c40a46c5c691461d2135d59e7ad7
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website, built using React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I’m Keerthika Nimmagadda, a 4th year BTech CSE student and aspiring developer.  
+With hands-on experience in Full-stack development, data analytics, Python (via an internship at INTRAIN TECH/SkillCepha), and a solid foundation in database administration and AWS architecture, I’m focused on creating clean, responsive web applications.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-<<<<<<< HEAD
-=======
+- **React** – for building modular, component-based UI  
+- **Tailwind CSS** – for utility-first, responsive styling  
+- **JavaScript / JSX** – for interactive logic and structure  
+- **Git & GitHub Pages** – for version control and deployment  
 
-Hi there 👋, I’m Keerthika Nimmagadda
+## Project Structure
 
- -> Computer Science & Engineering undergraduate (VIT Amaravati, 2022–2026)
- -> Passionate about software development, web development, and data-driven solutions
- -> Continuously exploring data structures, algorithms, and cloud technologies
+/src
+/components – reusable React components
+/pages – page-level components (Home, About, Projects, Contact)
+/assets – images, icons, etc.
+/styles – custom Tailwind configurations (if any)
+tailwind.config.js
+postcss.config.js
+package.json
 
-🔹 About Me
 
- -> Currently pursuing B.Tech in CSE (CGPA: 7.96)
- -> Experienced in Python, Java, JavaScript, HTML, CSS
- -> Hands-on with data structures, databases, APIs, and analytics
- -> Fluent in Telugu, Hindi, English, and French
- -> Actively contributing as Technical Lead @ Next-Gen Cloud Club (NGC), VIT
+## Features
 
-🔹 Projects
+- Fully responsive layout (desktop, tablet, mobile)  
+- Clean and modern design using Tailwind’s utility classes  
+- Navigation bar linking to major sections  
+- Projects section showcasing my work/skills  
+- Contact section with my contact details  
+- Deployed via GitHub Pages for easy access  
 
- -> Online Book Store :
-        A Java-based console application showcasing efficient use of data structures and algorithms for a functional  bookstore system.
+## Installation & Deployment
 
--> Inventory Management System :
-        Console-based Java system for managing inventory with database integration and business logic.
+1. Clone the repo  
+   git clone https://github.com/keerthikaa27/Portfolio
+   cd portfolio
 
-🔹 Experience & Achievements
+2. Install dependencies
+   npm install
 
-  -> Internship @ Intrain Tech (in collaboration with SkillCepha) – Worked on Healthy Lifestyle Project
+3. Run the development server
+   npm start
 
-  -> Web Development Training @ Corizo – Built hands-on experience in modern web technologies
+4. Build for production
+   npm run build
 
-  -> Finalist in International Programming League @ VIT and Speed Code Global Event
+5. Deploy (using GitHub Pages)
+   Make sure homepage is set in package.json
+   Push to gh-pages branch (or use a workflow)
+   Your site will be live at the URL above.
 
-  -> Ranked Top 10 in Run Raise Repeat (National Event) organized by NGC & MSC
+Why This Approach:
+1.React allows for component reuse and clear structure, making future updates easier.
+2.Tailwind CSS gives fast, consistent styling with minimal custom CSS.
+3.GitHub Pages provides a free, reliable deployment option.
 
-🔹 Tech Stack
-
-  -> Languages & Tools
-     Python | Java | JavaScript | HTML | CSS | Pandas | NumPy | Databases | APIs | ETL Tools 
-
-✨ I love solving problems, building impactful projects, and collaborating with communities to create meaningful tech solutions.a0843fda9dbf85b9aa5dfbfab427752bf74c4670
->>>>>>> 32af1ee7a962c40a46c5c691461d2135d59e7ad7
+Acknowledgements: 
+Thanks to all the open-source libraries and the community support. Special mention to Tailwind CSS and React for the dev experience.

@@ -12,7 +12,7 @@ export const projects = [
     "Developed an interactive React frontend with session management, chat history, reset functionality, and typing animations.",
     "Implemented Redis caching for efficient session-based history retrieval and smooth real-time conversations."
   ],
-  link: "https://news-chatbot-frontend-e592.onrender.com/"
+  link: "https://newsify-newschatbot.netlify.app/"
   },
 
   {
@@ -69,7 +69,6 @@ export const projects = [
   },
 ];
 
-// keep the default component too
 export default function Projects() {
   return (
     <section id="projects" className="py-20 px-6 bg-gray-900">

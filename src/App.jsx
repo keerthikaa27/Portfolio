@@ -1,5 +1,3 @@
-// --- file: src/App.jsx ---
-
 import { motion } from "framer-motion";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
@@ -91,7 +89,6 @@ export default function App() {
   );
 }
 
-// Helper component
 function SkillGroup({ title, items }) {
   return (
     <div>

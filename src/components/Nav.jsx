@@ -1,4 +1,3 @@
-// src/components/Nav.jsx
 import { useEffect, useState } from "react";
 
 const sections = [
@@ -31,7 +30,7 @@ export default function Nav() {
       }
     };
 
-    onScroll(); // check active section on mount
+    onScroll(); 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
