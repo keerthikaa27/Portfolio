@@ -18,7 +18,6 @@ export default function Hero() {
   return (
     <section id="top" className="section pt-16 bg-[#0a192f] text-white relative overflow-hidden">
       
-      {/* Decorative floating circles */}
       <motion.div
         className="absolute w-32 h-32 bg-brand-400/20 rounded-full top-10 left-10"
         animate={{ y: [0, 20, 0], x: [0, 15, 0] }}
@@ -54,7 +53,6 @@ export default function Hero() {
             ))}
           </motion.h1>
 
-          {/* Animated Role Badge */}
           <div className="mb-4 h-8 relative">
             <AnimatePresence mode="wait">
               <motion.span
@@ -79,7 +77,6 @@ export default function Hero() {
             {Profile.summary}
           </motion.p>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,7 +95,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Profile Picture with gradient border */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -115,7 +111,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Down Cue */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
