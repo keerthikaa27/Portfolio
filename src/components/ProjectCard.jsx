@@ -262,7 +262,6 @@ export default function ProjectCard({ project, index }) {
           </motion.ul>
         )}
 
-        {/* Link */}
         {project.link && (
           <motion.div variants={itemVariants}>
             <a
@@ -288,7 +287,6 @@ export default function ProjectCard({ project, index }) {
         )}
       </motion.div>
 
-      {/* Decorative corner elements */}
       <motion.div
         className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 pointer-events-none"
         style={{
