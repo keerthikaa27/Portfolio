@@ -3,6 +3,18 @@ import ProjectCard from "./ProjectCard";
 
 export const projects = [
   {
+  title: "Prep-Pilot – AI-Driven Interview Preparation Platform ",
+  period: "2025",
+  description: "An AI-powered platform for personalized interview and career guidance",
+  stack: ["React.js", "Next.js", "Node.js", "Tailwind CSS", "ShadCN UI", "LLMs", "REST APIs"],
+  highlights: [
+    "Built a full-stack platform using React and Next.js, Tailwind CSS, and ShadCN UI with an AI assistant for real-time interview guidance.",
+    "Designed and integrated AI-powered workflows for resume evaluation, job search, LinkedIn optimization, interview roadmaps, and role-based quizzes using LLM and REST APIs.",
+    "Built UI with strong focus on performance, modularity, and user experience."
+  ],
+  link: "https://ai-prep-pilot-4.onrender.com/"
+  },
+  {
   title: "Newsify – RAG-Powered News Chatbot",
   period: "2025",
   description: "A Full-Stack AI chatbot that answers queries over news articles using Retrieval-Augmented Generation (RAG).",
