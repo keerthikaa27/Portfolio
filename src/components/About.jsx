@@ -248,38 +248,73 @@ export default function About() {
                 />
               </motion.h2>
 
-              <motion.p 
+              <motion.p
                 variants={textVariants}
-                className="text-zinc-300 leading-relaxed mb-6 group-hover:text-zinc-200 transition-colors duration-500"
+                className="text-zinc-300 leading-relaxed mb-4 group-hover:text-zinc-200 transition-colors duration-500"
               >
-                I am a <motion.span 
+                I'm a <motion.span
                   className="font-semibold text-white"
-                  whileHover={{ 
+                  whileHover={{
                     color: "rgb(96, 165, 250)",
                     transition: { duration: 0.3 }
                   }}
                 >
-                  Computer Science undergraduate at VIT AP University
-                </motion.span> 
-                with a strong interest in <motion.span 
-                  className="text-brand-400 font-medium"
-                  whileHover={{ 
-                    scale: 1.05,
-                    transition: { duration: 0.2 }
+                  Full Stack Developer and Computer Science graduate
+                </motion.span> with hands-on experience building and working on real-world applications.
+              </motion.p>
+
+              <motion.p
+                variants={textVariants}
+                className="text-zinc-300 leading-relaxed mb-4 group-hover:text-zinc-200 transition-colors duration-500"
+              >
+                I currently work at <motion.span
+                  className="font-semibold text-white"
+                  whileHover={{
+                    color: "rgb(96, 165, 250)",
+                    transition: { duration: 0.3 }
                   }}
                 >
-                  Software Development, Full-Stack Development, and Data Analytics
-                </motion.span>.  
-                I enjoy building clean, scalable applications and exploring the intersection of <motion.span 
+                  AI Tensors Corp (AITCare)
+                </motion.span> on a production healthcare platform, working with <motion.span
+                  className="text-brand-400 font-medium"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
+                  React.js, Python, FastAPI, AWS, and DynamoDB
+                </motion.span>. My work includes building features, developing APIs, debugging production issues, improving performance, and supporting deployments.
+              </motion.p>
+
+              <motion.p
+                variants={textVariants}
+                className="text-zinc-300 leading-relaxed mb-4 group-hover:text-zinc-200 transition-colors duration-500"
+              >
+                I've also worked with <motion.span
+                  className="text-brand-400 font-medium"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
+                  Next.js, TypeScript, Node.js, PostgreSQL, MongoDB, Docker, Supabase, and REST APIs
+                </motion.span>, along with AI technologies such as <motion.span
                   className="font-semibold text-white"
-                  whileHover={{ 
+                  whileHover={{
                     color: "rgb(34, 211, 238)",
                     transition: { duration: 0.3 }
                   }}
                 >
-                  technology and problem-solving
-                </motion.span>.  
-                With hands-on experience through internships, training, and projects, I aim to deliver solutions that are both functional and impactful.  
+                  RAG and LLM-based applications
+                </motion.span>.
+              </motion.p>
+
+              <motion.p
+                variants={textVariants}
+                className="text-zinc-300 leading-relaxed mb-4 group-hover:text-zinc-200 transition-colors duration-500"
+              >
+                I like working across the stack and taking a feature from understanding the requirement to building, testing, debugging, and getting it ready for production. I'm comfortable picking up new technologies when a project requires them and working independently on tasks.
+              </motion.p>
+
+              <motion.p
+                variants={textVariants}
+                className="text-zinc-300 leading-relaxed mb-6 group-hover:text-zinc-200 transition-colors duration-500"
+              >
+                I'm early in my career, but I've already worked with production systems and real engineering problems. I'm looking for opportunities where I can build useful products, take on bigger problems, and keep getting better at software engineering.
               </motion.p>
 
               <motion.div variants={textVariants} className="flex gap-4">
