@@ -3,6 +3,19 @@ import ProjectCard from "./ProjectCard";
 
 export const projects = [
   {
+  title: "Interactome-AI – Multi-Drug Interaction Analysis Platform",
+  period: "01/2026 – 05/2026",
+  description: "A Full Stack Healthcare Analytics Platform for Drug Interaction Prediction.",
+  stack: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cytoscape.js"],
+  highlights: [
+    "Developed a healthcare application that analyzes complex medication combinations and helps identify potential adverse drug interactions using large-scale biomedical datasets.",
+    "Built data processing pipelines integrating data from multiple medical sources, including preprocessing, feature engineering, and graph-based relationship modeling.",
+    "Designed and implemented REST APIs, PostgreSQL database schemas, and backend services for risk analysis, interaction prediction, and report generation.",
+    "Developed the end-to-end web platform using Next.js, FastAPI, Docker, and Cytoscape.js, enabling interactive visualization, patient-specific assessments, and automated reporting."
+  ],
+  link: "https://interactome-ai-frontend.onrender.com/"
+  },
+  {
   title: "Prep-Pilot – AI-Driven Interview Preparation Platform ",
   period: "2025",
   description: "An AI-powered platform for personalized interview and career guidance",

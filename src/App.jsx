@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import { Profile, experience, Education, skills, achievements } from "./data/portfolio";
 import Achievement from "./components/Achievement";
+import Certifications from "./components/Certifications";
 
 export default function App() {
   return (
@@ -79,7 +80,8 @@ export default function App() {
           </div>
         </Section>
         <Achievement />
-        
+        <Certifications />
+
         <Contact />
         
       </main>

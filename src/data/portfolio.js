@@ -17,7 +17,7 @@ export const Education = [
   {
     school: "Vellore Institute of Technology (VIT), Amaravati",
     degree: "B.Tech in Computer Science and Engineering",
-    meta: "CGPA: 8.00",
+    meta: "CGPA: 8.04",
     period: "2022 — 2026",
   },
   {
@@ -35,6 +35,27 @@ export const Education = [
 ];
 
 export const experience = [
+  {
+    org: "AI Tensors Corp (AITCare)",
+    role: "Full Stack Developer Intern",
+    period: "06/2026 – Present | Visakhapatnam",
+    points: [
+      "Enhanced the production FallVision Dashboard using React.js and FastAPI, developing new features and improving the user experience for healthcare facility administrators.",
+      "Optimized dashboard performance by improving data loading, API responsiveness, and frontend rendering while ensuring reliable visualization of patient data from Amazon DynamoDB.",
+      "Resolved production issues related to debugging, data integrity, application stability, and system reliability across the frontend and backend.",
+      "Supported deployment and maintenance of a production AWS-hosted healthcare application using FastAPI, Uvicorn, and Gunicorn.",
+    ],
+  },
+  {
+    org: "WebeDigital",
+    role: "Full Stack Developer Intern",
+    period: "03/2026 – 06/2026 | Remote",
+    points: [
+      "Developed a responsive multi-page agency website using Next.js 14, TypeScript, and Tailwind CSS with reusable, mobile-friendly components.",
+      "Built a reusable booking and quote workflow featuring scheduling, email verification, frontend-backend integration, and the Resend Email API.",
+      "Implemented dynamic routing, custom animations, third-party integrations, and API routes to improve responsiveness and overall user experience.",
+    ],
+  },
   {
     org: "JD Jones & Co. Pvt. Ltd.",
     role: "Full Stack Developer Intern",
@@ -66,7 +87,19 @@ export const experience = [
 ];
 
 export const projects = [
-  
+  {
+    title: "Interactome-AI - Multi-Drug Interaction Analysis Platform",
+    period: "01/2026 – 05/2026",
+    stack: ["Next.js", "FastAPI", "PostgreSQL", "Docker", "Cytoscape.js"],
+    description:
+      "A Full Stack Healthcare Analytics Platform for Drug Interaction Prediction.",
+    highlights: [
+      "Analyzes complex medication combinations to identify potential adverse drug interactions using large-scale biomedical datasets",
+      "Data pipelines with preprocessing, feature engineering, and graph-based relationship modeling",
+      "REST APIs, PostgreSQL schemas, and backend services for risk analysis and report generation",
+    ],
+    link: "https://interactome-ai-frontend.onrender.com/",
+  },
   {
     title: "Online Book Store",
     period: "Jan 2024",
@@ -110,12 +143,11 @@ export const projects = [
 
 export const skills = {
   ProgrammingLanguages: ["Python", "Java", "JavaScript", "TypeScript", "SQL"],
-  Frameworks: ["React.js", "Next.js", "Node.js", "Express.js", "Angular", "Tailwind", "Flask", "NumPy", "Pandas"],
-  WebTechnologies: ["HTML", "CSS"],
-  Database: ["MongoDB", "MySQL", "PostgreSQL"],
-  Tools: ["Git", "Redis", "Docker", "CI/CD Tools"],
-  Cloud: ["AWS"],
-  CS_Fundamentals: ["Data Structures & Algorithms", "Object Oriented Programming", "Operating Systems", "Computer Network", "REST APIs"],
+  FrontendDevelopment: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Shadcn UI"],
+  BackendDevelopment: ["Node.js", "Express.js", "Flask", "FastAPI", "REST APIs", "Supabase (BaaS)"],
+  Databases: ["MySQL", "PostgreSQL", "MongoDB", "Amazon DynamoDB", "ChromaDB", "Redis"],
+  ToolsPlatforms: ["AWS", "Docker", "Git", "GitHub"],
+  SoftwareEngineering: ["Data Structures & Algorithms", "Object-Oriented Programming", "Operating Systems", "SDLC", "Debugging"],
   Softskills: [
     "Communication",
     "Teamwork",
@@ -131,4 +163,17 @@ export const achievements = [
   "3-hour Speed Code Global event (NGC, MSC, BRAC University) participant",
   "Recognized for contributions during Intrain Tech internship in Data Analytics",
   "Gained hands-on experience in web development during a 2 month training in Corizo company",
+];
+
+export const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    link: "https://www.credly.com/badges/e12ad764-3249-4b93-a090-70790a8bd0bd",
+  },
+  {
+    title: "Oracle Cloud Infrastructure AI Foundations Associate",
+    issuer: "Oracle",
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=32B92DE3AB57CADEDE29B5FC8254F034B5661CA3875F9D7BB5B9BD9B3FF2736C",
+  },
 ];

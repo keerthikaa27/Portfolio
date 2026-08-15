@@ -100,12 +100,11 @@ export default function Skills() {
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
                   {[
-                    { title: "Languages", items: skills.ProgrammingLanguages },
-                    { title: "Frameworks & Libraries", items: skills.Frameworks },
-                    { title: "Web", items: skills.WebTechnologies },
-                    { title: "Database", items: skills.Database },
-                    { title: "Cloud", items: skills.Cloud },
-                    { title: "Tools", items: skills.Tools },
+                    { title: "Programming Languages", items: skills.ProgrammingLanguages },
+                    { title: "Frontend Development", items: skills.FrontendDevelopment },
+                    { title: "Backend Development", items: skills.BackendDevelopment },
+                    { title: "Databases", items: skills.Databases },
+                    { title: "Tools & Platforms", items: skills.ToolsPlatforms },
                   ].map((group) => (
                     <motion.div key={group.title} variants={itemVariants}>
                       <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
@@ -130,13 +129,13 @@ export default function Skills() {
                     </motion.div>
                   ))}
 
-                  {/* CS Fundamentals - Full width */}
+                  {/* Software Engineering - Full width */}
                   <motion.div variants={itemVariants} className="md:col-span-2">
                     <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
-                      CS Fundamentals
+                      Software Engineering
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {skills.CS_Fundamentals.map((skill, i) => (
+                      {skills.SoftwareEngineering.map((skill, i) => (
                         <motion.span
                           key={i}
                           whileHover={{
