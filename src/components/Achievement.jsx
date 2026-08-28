@@ -1,34 +1,33 @@
 import { motion } from "framer-motion";
 import { achievements } from "../data/portfolio";
+import { Sparkles } from "lucide-react";
+import Reveal from "./ui/Reveal";
+import Stagger, { staggerItem } from "./ui/Stagger";
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="section py-20 text-white" style={{ backgroundColor: "#0a192f" }}>
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-10 text-white"
-        >
-          Achievements
-        </motion.h2>
+    <section id="achievements" className="section bg-[#0a192f] text-white">
+      <div className="container">
+        <Reveal>
+          <span className="eyebrow">Achievements</span>
+          <h2 className="section-title mt-3 mb-14 max-w-xl">Moments worth mentioning.</h2>
+        </Reveal>
 
-        <div className="space-y-4">
+        <Stagger className="grid sm:grid-cols-2 gap-4" gap={0.12}>
           {achievements.map((ach, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-zinc-900 p-4 rounded-xl shadow-md hover:shadow-brand-500/30 transition-shadow"
+              variants={staggerItem}
+              whileHover={{ x: 4 }}
+              className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-5 hover:border-brand-300/30 transition-colors"
             >
-              {ach}
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-300/10 text-brand-300">
+                <Sparkles size={15} />
+              </span>
+              <p className="text-sm text-zinc-300 leading-relaxed">{ach}</p>
             </motion.div>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

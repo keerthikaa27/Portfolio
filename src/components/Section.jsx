@@ -1,20 +1,16 @@
+import Reveal from "./ui/Reveal";
+
 export default function Section({ id, title, intro, children }) {
   return (
-    <section id={id} className="py-20 bg-[#0a192f] px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white flex items-center mb-6">
-          <span className="text-accent font-mono text-lg mr-2">
-            {sectionNumber(title)}
-          </span>
-          {title}
-          <span className="ml-4 h-[1px] w-40 bg-zinc-700"></span>
-        </h2>
+    <section id={id} className="section bg-[#0a192f]">
+      <div className="container">
+        <Reveal>
+          <span className="eyebrow">{sectionNumber(title)} {title}</span>
+          <h2 className="section-title mt-3 mb-4 max-w-xl">{title}</h2>
+          {intro && <p className="text-zinc-400 max-w-xl mb-14">{intro}</p>}
+          {!intro && <div className="mb-14" />}
+        </Reveal>
 
-        {/* Intro Paragraph */}
-        {intro && <p className="text-zinc-400 mb-8">{intro}</p>}
-
-        {/* Section Content */}
         {children}
       </div>
     </section>
@@ -23,14 +19,14 @@ export default function Section({ id, title, intro, children }) {
 
 function sectionNumber(title) {
   const order = {
-    About: "01.",
-    Experience: "02.",
-    Projects: "03.",
-    Skills: "04.",
-    Education: "05.",
-    Achievements: "06.",
-    Contact: "07.",
+    About: "01",
+    Experience: "02",
+    Projects: "03",
+    Skills: "04",
+    Education: "05",
+    Achievements: "06",
+    Certifications: "07",
+    Contact: "08",
   };
-  return order[title] || "";
+  return order[title] ? `${order[title]} /` : "";
 }
-

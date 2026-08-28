@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -9,26 +8,34 @@ import Skills from "./components/Skills";
 import TimelineItem from "./components/TimelineItem";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import { Profile, experience, Education, skills, achievements } from "./data/portfolio";
+import { experience, Education } from "./data/portfolio";
 import Achievement from "./components/Achievement";
 import Certifications from "./components/Certifications";
+import LiveSites from "./components/LiveSites";
+import Cursor from "./components/ui/Cursor";
+import Stagger from "./components/ui/Stagger";
+import IntroReveal from "./components/IntroReveal";
 
 export default function App() {
   return (
     <div className="bg-dark text-light font-sans">
+      <IntroReveal />
+      <Cursor />
       <Nav />
       <main>
-        {/* Hero Section */}
         <Hero />
         <About />
-        
+
+        {/* Skills Section */}
+        <Skills />
+
         {/* Experience Section */}
         <Section
           id="experience"
           title="Experience"
-          intro="Clubs, internships, and training that shaped my skills."
+          intro="Internships and hands-on training that shaped how I build software."
         >
-          <div className="space-y-8">
+          <Stagger gap={0.2}>
             {experience.map((item, i) => (
               <TimelineItem
                 key={i}
@@ -40,32 +47,23 @@ export default function App() {
                 }}
               />
             ))}
-          </div>
+          </Stagger>
         </Section>
 
         {/* Projects Section */}
         <Section id="projects" title="Projects" intro="A selection of things I've built or contributed to.">
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((p, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <ProjectCard project={p} />
-              </motion.div>
+          <Stagger className="grid md:grid-cols-2 gap-5" gap={0.1}>
+            {projects.map((p) => (
+              <ProjectCard key={p.title} project={p} />
             ))}
-          </div>
+          </Stagger>
         </Section>
 
-        <Skills />
-        
+        <LiveSites />
 
         {/* Education Section */}
         <Section id="education" title="Education">
-          <div className="space-y-8">
+          <Stagger gap={0.2}>
             {Education.map((ed, i) => (
               <TimelineItem
                 key={i}
@@ -77,35 +75,15 @@ export default function App() {
                 }}
               />
             ))}
-          </div>
+          </Stagger>
         </Section>
-        <Achievement />
-        <Certifications />
 
+        <Certifications />
+        <Achievement />
         <Contact />
-        
       </main>
 
       <Footer />
     </div>
   );
 }
-
-function SkillGroup({ title, items }) {
-  return (
-    <div>
-      <div className="text-xs uppercase tracking-widest text-gray">{title}</div>
-      <div className="mt-1 flex flex-wrap gap-2">
-        {items.map((s) => (
-          <span
-            key={s}
-            className="rounded-full border border-white/10 px-3 py-1 text-sm text-gray"
-          >
-            {s}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-

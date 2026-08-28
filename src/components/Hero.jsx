@@ -1,123 +1,116 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Profile } from "../data/portfolio";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { Profile, experience, certifications } from "../data/portfolio";
+import { projects } from "./Projects";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import Magnetic from "./ui/Magnetic";
+import Counter from "./ui/Counter";
 
 export default function Hero() {
-  const nameParts = Profile.name.split(" ");
-  const roles = ["Full-stack Developer", "Software Developer", "Web Developer"];
-  const [roleIndex, setRoleIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  const stats = [
+    { value: experience.length-2, suffix: "+", label: "Internships" },
+    { value: projects.length, suffix: "+", label: "Projects shipped" },
+    { value: certifications.length, suffix: "", label: "Certifications" },
+  ];
 
   return (
-    <section id="top" className="section pt-16 bg-[#0a192f] text-white relative overflow-hidden">
-      
-      <motion.div
-        className="absolute w-32 h-32 bg-brand-400/20 rounded-full top-10 left-10"
-        animate={{ y: [0, 20, 0], x: [0, 15, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute w-20 h-20 bg-brand-300/20 rounded-full bottom-20 right-20"
-        animate={{ y: [0, -15, 0], x: [0, -10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      <div className="container grid md:grid-cols-[1.3fr_1fr] gap-10 items-center relative z-10">
-
+    <section id="top" className="relative min-h-screen flex items-center pt-32 pb-20 bg-[#0a192f]">
+      <div className="container grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
         {/* Left: Text */}
         <div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-display text-4xl md:text-6xl font-semibold text-white mb-6"
+            className="flex items-center gap-2 mb-6"
           >
-            Hi, I'm{" "}
-            {nameParts.map((word, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.3 }}
-                className="inline-block mr-2 text-brand-400"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.h1>
+            <span className="eyebrow">yes, i debug on weekends too, I'm</span>
+          </motion.div>
 
-          <div className="mb-4 h-8 relative">
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={roleIndex}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.6 }}
-                className="inline-block bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full font-mono"
-              >
-                {roles[roleIndex]}
-              </motion.span>
-            </AnimatePresence>
-          </div>
+          <h1 className="font-display font-extrabold text-[13vw] sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-white">
+            {Profile.name.split(" ").map((word, i, arr) => (
+              <span key={word} className="block overflow-hidden">
+                <motion.span
+                  initial={{ y: "110%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.1 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                  className={`block ${i === arr.length - 1 ? "text-gradient" : ""}`}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            ))}
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-2 max-w-2xl text-zinc-400"
+            transition={{ duration: 0.7, delay: 0.55 }}
+            className="mt-8 max-w-lg text-lg text-zinc-400 leading-relaxed"
           >
-            {Profile.summary}
+            <span className="text-white font-medium">Full Stack Developer · Software Developer</span> — I
+            design and build production web systems end to end, from React interfaces to the APIs and
+            databases behind them.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-6 flex items-center gap-4"
+            transition={{ duration: 0.7, delay: 0.7 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <a className="btn" href={Profile.links.github} target="_blank" rel="noreferrer">
-              <Github size={18} /> GitHub
-            </a>
-            <a className="btn" href={Profile.links.linkedin} target="_blank" rel="noreferrer">
-              <Linkedin size={18} /> LinkedIn
-            </a>
-            <a className="btn" href={`mailto:${Profile.email}`}>
-              <Mail size={18} /> Email
-            </a>
+            <Magnetic as="a">
+              <a href="#projects" className="btn-solid">
+                View my work <ArrowUpRight size={16} />
+              </a>
+            </Magnetic>
+            <Magnetic as="a">
+              <a href="#contact" className="btn">
+                Get in touch
+              </a>
+            </Magnetic>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mt-16 grid grid-cols-3 max-w-md gap-6 border-t border-white/10 pt-8"
+          >
+            {stats.map((s) => (
+              <div key={s.label}>
+                <div className="font-display text-3xl font-bold text-white">
+                  <Counter value={s.value} suffix={s.suffix} />
+                </div>
+                <div className="text-xs text-zinc-500 mt-1">{s.label}</div>
+              </div>
+            ))}
           </motion.div>
         </div>
 
+        {/* Right: Photo — plain, centered */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          className="flex justify-center md:justify-end relative"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto flex justify-center"
         >
-          <div className="rounded-full p-1 bg-gradient-to-r from-brand-600 via-brand-300 to-brand-500 animate-gradient-spin">
-            <img
-              src={`${import.meta.env.BASE_URL}profile.jpg`}
-              alt={Profile.name}
-              className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-[#0a192f] shadow-lg object-cover"
-            />
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}profile.jpg`}
+            alt={Profile.name}
+            className="w-60 sm:w-72 aspect-square object-cover object-[center_20%] rounded-full ring-4 ring-brand-300 ring-offset-4 ring-offset-[#0a192f]"
+          />
         </motion.div>
       </div>
 
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="flex justify-center mt-12 relative z-10"
+      <motion.a
+        href="#about"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500 hover:text-brand-300 transition-colors"
+        aria-label="Scroll down"
       >
-        <ChevronDown size={32} className="text-brand-400" />
-      </motion.div>
+        <ArrowDown size={22} />
+      </motion.a>
     </section>
   );
 }

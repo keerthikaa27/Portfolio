@@ -40,10 +40,13 @@ export const experience = [
     role: "Full Stack Developer Intern",
     period: "06/2026 – Present | Visakhapatnam",
     points: [
-      "Enhanced the production FallVision Dashboard using React.js and FastAPI, developing new features and improving the user experience for healthcare facility administrators.",
-      "Optimized dashboard performance by improving data loading, API responsiveness, and frontend rendering while ensuring reliable visualization of patient data from Amazon DynamoDB.",
-      "Resolved production issues related to debugging, data integrity, application stability, and system reliability across the frontend and backend.",
-      "Supported deployment and maintenance of a production AWS-hosted healthcare application using FastAPI, Uvicorn, and Gunicorn.",
+      "Built and maintained FallVision, a healthcare platform that helps caregivers track elderly residents' activity, gait, sleep, and fall risk, using Python, FastAPI, React.js, TypeScript, AWS, and DynamoDB.",
+      "Built core modules — ADL tracking, gait analysis, sleep diary, fall events, patient profiles, and risk analytics — connected through REST APIs to real-time data in DynamoDB.",
+      "Managed backend deployments on AWS EC2 with Nginx, Uvicorn, and Gunicorn, and fixed production issues to keep the platform reliable and fast.",
+      "Tested the platform end to end — API, regression, load, and performance testing — using Postman, Pytest, Playwright, and JMeter/Locust to catch issues before they reached users.",
+      "Built a multi-role SaaS platform for AgeTech using Next.js, TypeScript, and AWS Cognito, with secure login, role-based access, and dashboards for each user type.",
+      "Building AI agents with AWS Bedrock and Claude that automatically evaluate startup applications and generate final reports.",
+      "Building a document evaluation pipeline with AWS Textract, S3, and Bedrock Knowledge Bases to analyze pitch decks and startup applications.",
     ],
   },
   {
@@ -143,11 +146,44 @@ export const projects = [
 
 export const skills = {
   ProgrammingLanguages: ["Python", "Java", "JavaScript", "TypeScript", "SQL"],
-  FrontendDevelopment: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Shadcn UI"],
   BackendDevelopment: ["Node.js", "Express.js", "Flask", "FastAPI", "REST APIs", "Supabase (BaaS)"],
+  FrontendDevelopment: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Shadcn UI"],
+  AIML: [
+    "AWS Bedrock",
+    "AI Agents",
+    "LLMs",
+    "AWS Textract",
+    "RAG",
+    "Embeddings",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Feature Engineering",
+    "Model Training",
+  ],
   Databases: ["MySQL", "PostgreSQL", "MongoDB", "Amazon DynamoDB", "ChromaDB", "Redis"],
-  ToolsPlatforms: ["AWS", "Docker", "Git", "GitHub"],
-  SoftwareEngineering: ["Data Structures & Algorithms", "Object-Oriented Programming", "Operating Systems", "SDLC", "Debugging"],
+  CloudTools: ["AWS EC2", "DynamoDB", "S3", "Cognito", "Docker", "Git", "GitHub", "CI/CD"],
+  SoftwareEngineering: [
+    "Data Structures & Algorithms",
+    "Computer Networks",
+    "Object-Oriented Programming",
+    "Operating Systems",
+    "SDLC",
+    "Debugging",
+    "Testing",
+  ],
+  Testing: [
+    "Software Testing",
+    "API Testing",
+    "Regression Testing",
+    "Performance Testing",
+    "Load Testing",
+    "Pytest",
+    "Postman",
+    "Playwright",
+    "JMeter",
+    "Locust",
+  ],
   Softskills: [
     "Communication",
     "Teamwork",
@@ -159,6 +195,7 @@ export const skills = {
 };
 
 export const achievements = [
+  "Presented Interactome-AI, a predictive framework for detecting higher-order adverse drug reactions in multi-medication regimens, at the 4th International Conference on Recent Advancements in Artificial Intelligence, Quantum Intelligence, and Inclusive Technologies (ICRAIQ2IT-2026), published by M/s Taylor & Francis, UK",
   "Qualified for the International Programming League at VIT",
   "3-hour Speed Code Global event (NGC, MSC, BRAC University) participant",
   "Recognized for contributions during Intrain Tech internship in Data Analytics",
@@ -175,5 +212,22 @@ export const certifications = [
     title: "Oracle Cloud Infrastructure AI Foundations Associate",
     issuer: "Oracle",
     link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=32B92DE3AB57CADEDE29B5FC8254F034B5661CA3875F9D7BB5B9BD9B3FF2736C",
+  },
+];
+
+export const liveSites = [
+  {
+    name: "Precrux",
+    domain: "precrux.com",
+    url: "https://precrux.com",
+    favicon: "favicons/precrux.png",
+    description: "Operator-led growth systems for founder-led brands ready to scale.",
+  },
+  {
+    name: "i4i Sciences",
+    domain: "i4isciences.com",
+    url: "https://i4isciences.com",
+    favicon: "favicons/i4isciences.png",
+    description: "An AI-powered education ecosystem where human mentorship meets intelligent tools.",
   },
 ];

@@ -1,262 +1,61 @@
 import { motion } from "framer-motion";
 import { skills } from "../data/portfolio";
+import Reveal from "./ui/Reveal";
+import Stagger, { staggerItem } from "./ui/Stagger";
+
+const GROUPS = [
+  { title: "Programming Languages", items: skills.ProgrammingLanguages },
+  { title: "Backend Development", items: skills.BackendDevelopment },
+  { title: "Frontend Development", items: skills.FrontendDevelopment },
+  { title: "AI/ML", items: skills.AIML },
+  { title: "Databases", items: skills.Databases },
+  { title: "Cloud & Tools", items: skills.CloudTools },
+  { title: "Software Engineering", items: skills.SoftwareEngineering },
+  { title: "Testing", items: skills.Testing },
+];
 
 export default function Skills() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <section
-      id="skills"
-      className="section py-20 relative overflow-hidden"
-      style={{ backgroundColor: "#0a192f", color: "white" }}
-    >
-      {/* Subtle animated background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
-        />
-      </div>
+    <section id="skills" className="section bg-[#0a192f] text-white relative">
+      <div className="container">
+        <Reveal>
+          <span className="eyebrow">Skills</span>
+          <h2 className="section-title mt-3 mb-14 max-w-xl">What I build with.</h2>
+        </Reveal>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-12 text-white"
+        <Stagger
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
+          gap={0.08}
         >
-          Skills
-        </motion.h2>
-
-        {/* Main grid layout - 3 column responsive */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Technical Skills - Spans 2 columns */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-2 relative group"
-          >
-            <motion.div
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="h-full bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-800/50 hover:border-zinc-700/50 transition-all duration-300"
-            >
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 rounded-2xl transition-all duration-500 pointer-events-none" />
-              
-              <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-6 text-brand-300">Technical</h3>
-
-                {/* Grid layout for categories */}
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                >
-                  {[
-                    { title: "Programming Languages", items: skills.ProgrammingLanguages },
-                    { title: "Frontend Development", items: skills.FrontendDevelopment },
-                    { title: "Backend Development", items: skills.BackendDevelopment },
-                    { title: "Databases", items: skills.Databases },
-                    { title: "Tools & Platforms", items: skills.ToolsPlatforms },
-                  ].map((group) => (
-                    <motion.div key={group.title} variants={itemVariants}>
-                      <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
-                        {group.title}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {group.items.map((skill, i) => (
-                          <motion.span
-                            key={i}
-                            whileHover={{
-                              scale: 1.05,
-                              y: -2,
-                              boxShadow: "0 4px 12px rgba(59, 130, 246, 0.4)",
-                            }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="px-3 py-1 bg-zinc-800 rounded-lg text-sm cursor-default select-none hover:bg-zinc-700/80 transition-colors duration-200"
-                          >
-                            {skill}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-
-                  {/* Software Engineering - Full width */}
-                  <motion.div variants={itemVariants} className="md:col-span-2">
-                    <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
-                      Software Engineering
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.SoftwareEngineering.map((skill, i) => (
-                        <motion.span
-                          key={i}
-                          whileHover={{
-                            scale: 1.05,
-                            y: -2,
-                            boxShadow: "0 4px 12px rgba(59, 130, 246, 0.4)",
-                          }}
-                          transition={{ type: "spring", stiffness: 300 }}
-                          className="px-3 py-1 bg-zinc-800 rounded-lg text-sm cursor-default select-none hover:bg-zinc-700/80 transition-colors duration-200"
-                        >
-                          {skill}
-                        </motion.span>
-                      ))}
-                    </div>
-                  </motion.div>
-                </motion.div>
+          {GROUPS.map((group) => (
+            <motion.div key={group.title} variants={staggerItem} className="bg-[#0a192f] p-7 group">
+              <h3 className="font-display text-base font-semibold text-white mb-4 flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-300 group-hover:scale-150 transition-transform" />
+                {group.title}
+              </h3>
+              <div className="flex flex-wrap gap-x-3 gap-y-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-sm text-zinc-400 hover:text-brand-300 transition-colors cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </motion.div>
-          </motion.div>
+          ))}
+        </Stagger>
 
-          {/* Professional Skills - Spans 1 column */}
-          <div className="flex flex-col gap-6">
-            {/* Soft Skills */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="relative group"
-            >
-              <motion.div
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-800/50 hover:border-zinc-700/50 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-500 pointer-events-none" />
-                
-                <div className="relative z-10">
-                  <h3 className="text-xl font-semibold mb-6 text-brand-300">Professional</h3>
-                  
-                  <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                  >
-                    <motion.div variants={itemVariants}>
-                      <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
-                        Soft Skills
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {skills.Softskills.map((skill, i) => (
-                          <motion.span
-                            key={i}
-                            whileHover={{
-                              scale: 1.05,
-                              y: -2,
-                              boxShadow: "0 4px 12px rgba(59, 130, 246, 0.4)",
-                            }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="px-3 py-1 bg-zinc-800 rounded-lg text-sm cursor-default select-none hover:bg-zinc-700/80 transition-colors duration-200"
-                          >
-                            {skill}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Languages */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-              className="relative group"
-            >
-              <motion.div
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="bg-zinc-900 p-8 rounded-2xl shadow-lg border border-zinc-800/50 hover:border-zinc-700/50 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 rounded-2xl transition-all duration-500 pointer-events-none" />
-                
-                <div className="relative z-10">
-                  <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                  >
-                    <motion.div variants={itemVariants}>
-                      <h4 className="text-sm text-zinc-400 uppercase mb-3 font-medium tracking-wide">
-                        Languages
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {skills.Languages.map((skill, i) => (
-                          <motion.span
-                            key={i}
-                            whileHover={{
-                              scale: 1.05,
-                              y: -2,
-                              boxShadow: "0 4px 12px rgba(59, 130, 246, 0.4)",
-                            }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="px-3 py-1 bg-zinc-800 rounded-lg text-sm cursor-default select-none hover:bg-zinc-700/80 transition-colors duration-200"
-                          >
-                            {skill}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
+        {/* Softer, secondary info */}
+        <Reveal delay={0.3} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-zinc-500">
+          <span className="text-zinc-400">Also comfortable with:</span>
+          {skills.Softskills.map((s) => (
+            <motion.span key={s} whileHover={{ color: "#e3cda0" }} className="cursor-default">
+              {s}
+            </motion.span>
+          ))}
+        </Reveal>
       </div>
     </section>
   );
