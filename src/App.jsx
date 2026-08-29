@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import { experience, Education } from "./data/portfolio";
 import Achievement from "./components/Achievement";
+import FavoriteProject from "./components/FavoriteProject";
 import Certifications from "./components/Certifications";
 import LiveSites from "./components/LiveSites";
 import Cursor from "./components/ui/Cursor";
@@ -49,6 +50,8 @@ export default function App() {
             ))}
           </Stagger>
         </Section>
+
+        <FavoriteProject />
 
         {/* Projects Section */}
         <Section id="projects" title="Projects" intro="A selection of things I've built or contributed to.">
